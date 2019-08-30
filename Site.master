@@ -1,7 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
 
 <!DOCTYPE html class="wf-poppins-n3-active wf-poppins-n4-active wf-poppins-n5-active wf-poppins-n6-active wf-poppins-n7-active wf-roboto-n3-active wf-roboto-n4-active wf-roboto-n5-active wf-roboto-n6-active wf-roboto-n7-active wf-active">
-
+<form runat="server">
 <html lang="en">
     <head runat="server">
     <meta charset="utf-8" />
@@ -27,6 +27,42 @@
 		<link href="assets/themes/metronic_v5.5.5/assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
 
 
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+<%--                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />--%>
+
+                <%--Site Scripts--%>
+<%--                <asp:ScriptReference Path="~/assets/themes/metronic_v5.5.5/assets/vendors/base/vendors.bundle.js" />
+                <asp:ScriptReference Path="~/assets/themes/metronic_v5.5.5/assets/demo/default/base/scripts.bundle.js" />--%>
+
+            </Scripts>
+        </asp:ScriptManager>
+        <!--begin::Web font -->
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script>
+            WebFont.load({
+                google: { "families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"] },
+                active: function () {
+                    sessionStorage.fonts = true;
+                }
+            });
+        </script>
+
+		<!--end::Web font -->
  
 </head>
 	<!-- begin::Head -->
@@ -230,7 +266,7 @@
 																	<i class="la la-remove"></i>
 																</span>
 															</div>
-														</form>
+														
 													</div>
 													<div class="m-dropdown__body">
 														<div class="m-dropdown__scrollable m-scrollable" data-scrollable="true" data-height="300" data-mobile-height="200">
@@ -1223,43 +1259,7 @@
 					<div class="m-content">
                         <div class="row">
                             <div class="col-md-12">
-                                    <form runat="server">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="bootstrap" />
-                <asp:ScriptReference Name="respond" />
-<%--                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />--%>
-
-                <%--Site Scripts--%>
-<%--                <asp:ScriptReference Path="~/assets/themes/metronic_v5.5.5/assets/vendors/base/vendors.bundle.js" />
-                <asp:ScriptReference Path="~/assets/themes/metronic_v5.5.5/assets/demo/default/base/scripts.bundle.js" />--%>
-
-            </Scripts>
-        </asp:ScriptManager>
-        <!--begin::Web font -->
-		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-		<script>
-            WebFont.load({
-                google: { "families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"] },
-                active: function () {
-                    sessionStorage.fonts = true;
-                }
-            });
-        </script>
-
-		<!--end::Web font -->
+                                    
 
                                         <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
@@ -1809,7 +1809,7 @@
 	<!-- end::Body -->
 </html>
 
-
+</form>
 
 
 
