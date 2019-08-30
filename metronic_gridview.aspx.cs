@@ -9,7 +9,8 @@ public partial class metronic_gridview : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        btnRun.ServerClick += new EventHandler(this.load_gridview);
+        //btnRun.ServerClick += new EventHandler(this.load_gridview);
+        btnRun.Click += new EventHandler(this.load_gridview);
 
 
     }

@@ -9,15 +9,19 @@
 					Base GridView Data
 				</h3>
 			</div>
+                                    
 		</div>
 		<div class="m-portlet__head-tools">
-            <button runat="server" id="btnRun" class="btn btn-metal m-btn--icon" title="Search">
+<%--            <button runat="server" id="btnRun" class="btn btn-metal m-btn--icon" title="Search">
                 <i class="fa fa-plus"></i> Search
             </button>
+            <asp:Button ID="Button1" runat="server" Text="Button" />--%>
+            <asp:LinkButton ID="btnRun" CssClass="btn m-btn--pill m-btn--air btn-outline-info" runat="server"><i class="fa fa-plus"></i> Search</asp:LinkButton>
+
 		</div>
 		</div>
         <div class="m-portlet__body">
-            <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+            <asp:GridView ID="GridView1" runat="server" CssClass="table table-striped table-bordered table-hover table-checkable dataTable no-footer dtr-inline collapsed"></asp:GridView>
         </div>
      </div>
 </asp:Content>
